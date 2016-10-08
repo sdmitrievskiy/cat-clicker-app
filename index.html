@@ -3,16 +3,25 @@
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>Cat Clicker App</title>
+	<title>Cat Clicker Premium App</title>
 	<link rel="stylesheet" href="style.css">
 </head>
 <body>
-	<div id='root'>
-		
+	<div id='app'>
+		<div id='list' class="list"></div>
+		<div id='cat' class="cat"></div>
 	</div>
 
-	<script src="Cat.js" type="text/javascript"></script>
-	<script src="List.js" type="text/javascript"></script>
+
+
+	
+	<script src="Models/ModelCat.js" type="text/javascript"></script>
+
+	<script src="Views/ViewCat.js" type="text/javascript"></script>
+	<script src="Views/ViewList.js" type="text/javascript"></script>
+
+	<script src="Controllers/Controller.js" type="text/javascript"></script>
+
 	<script src="App.js" type="text/javascript"></script>
 </body>
 </html>
