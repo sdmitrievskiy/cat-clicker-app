@@ -8,8 +8,19 @@
 </head>
 <body>
 	<div id='app'>
-		<div id='list' class="list"></div>
-		<div id='cat' class="cat"></div>
+		<div id="list" class="list"></div>
+		<div id="cat" class="cat"></div>
+		<div id="admin" class="admin">
+			<button class="admin__open-btn">Admin</button>
+			<form>
+				<input type="text" name="name">
+				<input type="text" name="image">
+				<input type="text" name="clickCount">
+
+				<button class="admin__cancel-btn">Cancel</button> 
+				<button class="admin__submit-btn" type="submit">Add Cat</button>
+			</form>
+		</div>
 	</div>
 
 
@@ -19,6 +30,7 @@
 
 	<script src="Views/ViewCat.js" type="text/javascript"></script>
 	<script src="Views/ViewList.js" type="text/javascript"></script>
+	<script src="Views/ViewAdmin.js" type="text/javascript"></script>
 
 	<script src="Controllers/Controller.js" type="text/javascript"></script>
 

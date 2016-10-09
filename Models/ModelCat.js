@@ -1,4 +1,4 @@
-var CatsJSON = '[{"id": "1","name": "Бекки 1","image": "images/cat1.jpg","clickCount": "0"},{"id": "2","name": "Бекки 2","image": "images/cat2.jpg","clickCount": "0"},{"id": "3","name": "Бекки 3","image": "images/cat3.jpg","clickCount": "0"},{"id": "4","name": "Бекки 4","image": "images/cat4.jpg","clickCount": "0"},{"id": "5","name": "Бекки 5","image": "images/cat5.jpg","clickCount": "0"}]';
+var CatsJSON = '[{"id":1,"name": "Бекки 1","image": "images/cat1.jpg","clickCount": "0"},{"id":2,"name": "Бекки 2","image": "images/cat2.jpg","clickCount": "0"},{"id":3,"name": "Бекки 3","image": "images/cat3.jpg","clickCount": "0"},{"id":4,"name": "Бекки 4","image": "images/cat4.jpg","clickCount": "0"},{"id":5,"name": "Бекки 5","image": "images/cat5.jpg","clickCount": "0"}]';
 
 var ModelCat = {
 	init: function() {
@@ -8,12 +8,13 @@ var ModelCat = {
 		this.currentCatId = currentCatId;
 	},
 	getCurrentCat: function() {
+
 		var currentCatId = this.currentCatId;
 
         var currentCat = this.cats.filter(function(cat) {
-            return (cat.id === currentCatId);
+        	return (cat.id === currentCatId);
         });
-
+   
         return currentCat[0];
 	},
 	getCatsList: function() {
@@ -28,5 +29,17 @@ var ModelCat = {
 
         currentCat[0].clickCount++;
 
-	}	
+	},
+	addNewCat: function(name, image, clickCount) {
+		var newCat = {
+			id: this.cats[this.cats.length - 1].id + 1, //id последнего кошака + 1
+			name: name,
+			image: image,
+			clickCount: clickCount
+		};
+		
+		this.cats.push(newCat);
+
+		return newCat.id;
+	}
 };

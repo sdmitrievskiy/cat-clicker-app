@@ -20,7 +20,7 @@ var ViewList = {
     },
     listItemClick: function(event) {
             var clickedItem = event.target;
-            var catToSetId = clickedItem.getAttribute('data-cat-id');
+            var catToSetId = parseInt(clickedItem.getAttribute('data-cat-id'));
 
             Controller.changeCat(catToSetId);
     }
